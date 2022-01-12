@@ -27,7 +27,7 @@
         </div>
        
     </div>
-    <div class="container-fluid justify-content-center p-3"  id="contentPage">
+    <div class="container-fluid justify-content-center" id="contentPage">
         <div class="row bg-dark"></div>
         <div class="row m-5">
             <div class="col-md-1" style="background-color: white;">  
@@ -45,7 +45,7 @@
                         
         </div>
         
-        <div class="row m-5 p-3 bg-light">
+        <div class="row mt-3 md-3 p-3 bg-light">
             <div class="col-md-1" >  
             </div>
             <div class="col-md-10" >  
@@ -83,7 +83,7 @@
                       
         </div>
 
-        <div class="row m-5 p-3 bg-light">
+        <div class="row mt-3 md-3 p-3 bg-light">
           <div class="col-md-1"></div>
           <div class="col-md-3">
             <h1>Design Thinking</h1>
@@ -95,19 +95,23 @@
           
         </div>
 
-        <div class="row bg-dark p-3" >
-            <div class="col-md-1" >  
+        <div class="row bg-dark p-5" >
+            <div class="col-sm-1" >  
             </div>
-            <div class="col-md-4 form-group">
+            <div class="col-sm-4 form-group p-3">
             <h3 style="margin: 10px; color: white;">Leave your contract information</h3>
             <label for=""></label>
             <input type="text" name="" id="mySubject" class="form-control m-3" placeholder="Subject" aria-describedby="helpId">
             <input type="text" name="" id="myText" class="form-control m-3" placeholder="Text" aria-describedby="helpId">
             <button onclick="sendMail(); return false" type="submit" class="form-control btn btn-primary m-3">Submit</button>
             </div>
-            <div class="col-md-2">
-              <h1></h1>
+            <div class="col-sm-6 p-5">
+              <h3 class="text-white p-1 m-0">Anschrift</h3>
+              <p class="text-white p-1 m-0">Marvin Hill</p>
+              <p class="text-white p-1 m-0">Flattichstraße 11</p>
+              <p class="text-white p-1 m-0">71679 Asperg</p>
             </div>
+            <div class="col-sm-1"></div>
         </div>
     </div>
     
@@ -119,9 +123,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
       function sendMail() {
-    var link = "mailto:marvindavidhill@gmail.com";
-    
-    window.location.href = link;
+        var subject = document.getElementById("mySubject").value; 
+        var text = document.getElementById("myText").value;
+        window.open('mailto:marvindavidhill@gmail.com?subject='.concat(subject).concat('&body=').concat(text));
     }
     </script>
   </body>
